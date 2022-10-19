@@ -3257,26 +3257,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\اسامہ\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\Ehtisham Shahbaz\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Visual studio\\Genesis-section5\\Genesis.Services.Identity\\Genesis.Services.Identity.csproj",
+      "projectUniqueName": "C:\\Users\\Ehtisham Shahbaz\\Desktop\\Genesis-Backend\\internalGenesis\\Genesis.Services.Identity.csproj",
       "projectName": "Genesis.Services.Identity",
-      "projectPath": "D:\\Visual studio\\Genesis-section5\\Genesis.Services.Identity\\Genesis.Services.Identity.csproj",
-      "packagesPath": "C:\\Users\\اسامہ\\.nuget\\packages\\",
-      "outputPath": "D:\\Visual studio\\Genesis-section5\\Genesis.Services.Identity\\obj\\",
+      "projectPath": "C:\\Users\\Ehtisham Shahbaz\\Desktop\\Genesis-Backend\\internalGenesis\\Genesis.Services.Identity.csproj",
+      "packagesPath": "C:\\Users\\Ehtisham Shahbaz\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Ehtisham Shahbaz\\Desktop\\Genesis-Backend\\internalGenesis\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\اسامہ\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\Ehtisham Shahbaz\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

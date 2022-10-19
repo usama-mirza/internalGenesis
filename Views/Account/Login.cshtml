@@ -1,59 +1,79 @@
-@model LoginViewModel
+﻿@model LoginViewModel
 
-<div class="login-page">
-    <div class="lead">
-        <h1>Login</h1>
-        <p>Choose how to login</p>
-    </div>
 
-    <partial name="_ValidationSummary" />
+<partial name="_ValidationSummary" />
 
-    <div class="row">
-
+<div class="container mainContainer">
+    <div class="authContainer">
+        <img src="~/assets/svgs/auth-logo.svg" class="logo-img" alt="Genesis Logo" />
+        </div>
+        <div class="justify-content-center row">
         @if (Model.EnableLocalLogin)
         {
-            <div class="col-sm-6">
-                <div class="card">
-                    <div class="card-header">
-                        <h2>Local Account</h2>
-                    </div>
-
-                    <div class="card-body">
-                        <form asp-route="Login">
+            <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12">
+                <div class="customCard">
+                    <h2 class="text-center loginHead">Login</h2>
+                    <div class="form-body">
+                        <form asp-route="Login" class="MuiBox-root css-pacjxg inputFormBody" novalidate="" autoComplete="off">
                             <input type="hidden" asp-for="ReturnUrl" />
+      
+                            <div class="emailDiv">
+                                <div class="MuiFormControl-root MuiTextField-root w-100 email-container css-1u3bzj6-MuiFormControl-root-MuiTextField-root">
+                                    <label asp-for="Username"
+                                       class="customLabel MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
+                                       data-shrink="false" for="outlined-email" id="outlined-email-label">
+                                        Email<span aria-hidden="true"
+                                               class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-wgai2y-MuiFormLabel-asterisk"> *</span>
+                                    </label>
 
-                            <div class="form-group">
-                                <label asp-for="Username"></label>
-                                <input class="form-control" placeholder="Username" asp-for="Username" autofocus>
-                            </div>
-                            <div class="form-group">
-                                <label asp-for="Password"></label>
-                                <input type="password" class="form-control" placeholder="Password" asp-for="Password" autocomplete="off">
-                            </div>
-                            @if (Model.AllowRememberLogin)
-                            {
-                                <div class="form-group">
-                                    <div class="form-check">
-                                        <input class="form-check-input" asp-for="RememberLogin">
-                                        <label class="form-check-label" asp-for="RememberLogin">
-                                            Remember My Login
-                                        </label>
-                                    </div>
+                                    <input aria-invalid="false" id="outlined-email" placeholder="Enter your email"
+                                       asp-for="Username" autofocus
+                                       required="" type="text" class="customInput MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input" />
+
                                 </div>
-                            }
-                            <button class="btn btn-primary" name="button" value="login">Login</button>
-                            <button class="btn btn-secondary" name="button" value="cancel">Cancel</button>
-                        </form>
-                    </div>
+                            </div>
+                            <div class="passwordDiv">
+                                <div class="MuiFormControl-root MuiTextField-root w-100 password-container css-1u3bzj6-MuiFormControl-root-MuiTextField-root">
 
-                    <div class="card-footer">
-                         <a href="@Url.Action("Register",new {Model.ReturnUrl })">New User? Register</a>
+                                    <label asp-for="Password"
+                                       class="customLabel MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
+                                       data-shrink="false" for="outlined-email" id="outlined-email-label">
+                                        Password<span aria-hidden="true"
+                                                  class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-wgai2y-MuiFormLabel-asterisk"> *</span>
+                                    </label>
+
+                                    <input asp-for="Password" autocomplete="off" aria-invalid="false" id="outlined-password" placeholder="Enter your password"
+                                       required="" type="password" autocomplete="off"
+                                       class="customInput MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input" />
+
+                                </div>
+                            </div>
+                            
+
+                           <div class="d-flex justify-content-end">
+                                <a class="forgotPass">
+                                    Forgot Password?
+                                </a>
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                <button name="button" value="login"
+                                    class="loginButton">
+                                    Login
+                                </button>
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                <p class="privacyPolicy">
+                                    Privacy policy
+                                </p>
+                        </div>
+
+                        </form>
                     </div>
                 </div>
             </div>
         }
 
-        @if (Model.VisibleExternalProviders.Any())
+         @if (Model.VisibleExternalProviders.Any())
         {
             <div class="col-sm-6">
                 <div class="card">
@@ -88,4 +108,4 @@
             </div>
         }
     </div>
-</div>
+    </div>
